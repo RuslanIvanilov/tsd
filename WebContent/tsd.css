@@ -1,0 +1,146 @@
+.wmform{
+	zoom:200%;
+}
+
+.ceform{
+
+}
+.ce1btn{
+	display: inline;
+	float: inherit;
+	height: 20%;
+	width: 90%;
+}
+
+.wm1btn{
+	display: inline;
+	float: inherit;
+	height: 52px;
+	width: 230px;
+}
+
+.wm21bin{
+	display: inline;
+	float: inherit;
+	height: 20%;
+	width: 45%;
+}
+
+.wm22bin{
+	display: inline;
+	float: inherit;
+	height: 20%;
+	width: 45%;
+}
+
+.ce21bin{
+	display: inline;
+	float: inherit;
+	height: 20%;
+	width: 45%;
+}
+
+.ce22bin{
+	display: inline;
+	float: inherit;
+	height: 20%;
+	width: 45%;
+}
+
+.wm31bin{
+	display: inline;
+	float: inherit;
+	height: 52px;
+	width: 50px;
+}
+
+.wm32bin{
+	display: inline;
+	float: inherit;
+	height: 52px;
+	width: 70px;
+}
+
+.wm33bin{
+	display: inline;
+	float: inherit;
+	height: 52px;
+	width: 90px;
+}
+
+.ce31bin{
+	display: inline;
+	float: inherit;
+	height: 20%;
+	width: 30%;
+}
+
+.ce32bin{
+	display: inline;
+	float: inherit;
+	height: 20%;
+	width: 30%;
+}
+
+.ce33bin{
+	display: inline;
+	float: inherit;
+	height: 20%;
+	width: 30%;
+}
+
+.wminput{
+	border:none;
+}
+
+.ceinput{
+	border:none;
+}
+
+.div{
+	overflow: hidden;
+}
+
+.option {
+	padding: 0px; /* Поля вокруг текста */
+	text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+.wmselect {
+	float: none;
+	overflow-y: scroll;
+	overflow-x: auto;
+	height: 80%;
+	width: 100%;
+	font-size: 30px;
+}
+
+.ceselect {
+	float: none;
+	overflow-y: scroll;
+	overflow-x: auto;
+	height: 60%;
+	width: 100%;
+	font-size: 11px;
+}
+
+.wmselectdiv{
+	width: 100%;
+	overflow-x: none;
+	overflow-y: none;
+	height: 80%;
+}
+
+.ceselectdiv{
+	width: 100%;
+	overflow-x: none;
+	overflow-y: none;
+	height: 60%;
+}
+
+.cebody {
+	margin-right: -15px;
+	margin-bottom: -15px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}

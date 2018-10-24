@@ -1,0 +1,45 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ArticleServiceImplService WSDL service -->
+
+  <service name="ArticleServiceImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://services.defo.ru"/>
+      <parameter name="wsdlServiceElement" value="ArticleServiceImplService"/>
+      <parameter name="schemaQualified" value="http://model.defo.ru,http://services.defo.ru"/>
+      <parameter name="wsdlServicePort" value="ArticleServiceImpl"/>
+      <parameter name="className" value="ru.defo.services.ArticleServiceImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ArticleServiceImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getArticles" qname="operNS:getArticles" xmlns:operNS="http://services.defo.ru" returnQName="retNS:getArticlesReturn" xmlns:retNS="http://services.defo.ru" returnType="rtns:WmArticle" xmlns:rtns="http://model.defo.ru" soapAction="" >
+      </operation>
+      <operation name="addArticle" qname="operNS:addArticle" xmlns:operNS="http://services.defo.ru" returnQName="retNS:addArticleReturn" xmlns:retNS="http://services.defo.ru" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:article" xmlns:pns="http://services.defo.ru" type="tns:WmArticle" xmlns:tns="http://model.defo.ru"/>
+      </operation>
+      <operation name="getArticle" qname="operNS:getArticle" xmlns:operNS="http://services.defo.ru" returnQName="retNS:getArticleReturn" xmlns:retNS="http://services.defo.ru" returnType="rtns:WmArticle" xmlns:rtns="http://model.defo.ru" soapAction="" >
+        <parameter qname="pns:articleid" xmlns:pns="http://services.defo.ru" type="tns:long" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="deleteArticle" qname="operNS:deleteArticle" xmlns:operNS="http://services.defo.ru" returnQName="retNS:deleteArticleReturn" xmlns:retNS="http://services.defo.ru" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:articleid" xmlns:pns="http://services.defo.ru" type="tns:long" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="addArticle getArticle getArticles deleteArticle"/>
+
+      <typeMapping
+        xmlns:ns="http://model.defo.ru"
+        qname="ns:WmArticle"
+        type="java:ru.defo.model.WmArticle"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

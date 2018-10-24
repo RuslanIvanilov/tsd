@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.WmUnitType" table="wm_unit_type" schema="public" catalog="wms">
+        <id name="unitTypeCode">
+            <column name="unit_type_code" sql-type="varchar(3)" length="3"/>
+        </id>
+        <property name="description">
+            <column name="description" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="heigh">
+            <column name="heigh" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="width">
+            <column name="width" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="depth">
+            <column name="depth" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="maxWight">
+            <column name="max_wight" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="blocked">
+            <column name="blocked" sql-type="boolean" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

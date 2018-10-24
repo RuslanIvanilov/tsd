@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.WmUserPermission" table="wm_user_permission" schema="public" catalog="wms">
+        <composite-id mapped="true" class="ru.defo.model.WmUserPermissionPK">
+            <key-property name="userId">
+                <column name="user_id" sql-type="integer"/>
+            </key-property>
+            <key-property name="permissionId">
+                <column name="permission_id" sql-type="integer"/>
+            </key-property>
+        </composite-id>
+        <property name="createUser">
+            <column name="create_user" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="createDate">
+            <column name="create_date" sql-type="timestamp(5) with time zone" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

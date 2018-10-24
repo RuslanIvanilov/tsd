@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/wms</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">wms010</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.cglib.use_reflection_optimizer">true</property> <!-- old: false -->
+		<property name="hibernate.cache.use_query_cache">false</property>
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <mapping class="ru.defo.model.WmPermission"/>
+        <mapping resource="ru/defo/model/WmPermission.hbm.xml"/>
+        <mapping class="ru.defo.model.WmUser"/>
+        <mapping resource="ru/defo/model/WmUser.hbm.xml"/>
+        <mapping class="ru.defo.model.WmUserPermission"/>
+        <mapping resource="ru/defo/model/WmUserPermission.hbm.xml"/>
+		<mapping class="ru.defo.model.WmHistory"/>
+        <!-- <mapping resource="ru/defo/model/WmHistory.hbm.xml"/>  -->
+		<mapping class="ru.defo.model.WmLocation"/>
+        <mapping resource="ru/defo/model/WmLocation.hbm.xml"/>
+		<mapping class="ru.defo.model.WmUnitType"/>
+        <mapping resource="ru/defo/model/WmUnitType.hbm.xml"/>
+		<mapping class="ru.defo.model.WmUnit"/>
+        <!-- <mapping resource="ru/defo/model/WmUnit.hbm.xml"/> -->
+		<mapping class="ru.defo.model.WmBin"/>
+        <!-- <mapping resource="ru/defo/model/WmBin.hbm.xml"/>  -->
+		<mapping class="ru.defo.model.WmQuant"/>
+        <mapping resource="ru/defo/model/WmQuant.hbm.xml"/>
+		<mapping class="ru.defo.model.WmBarcode"/>
+		<mapping class="ru.defo.model.WmArticle"/>
+		<mapping class="ru.defo.model.WmArea"/>
+	    <!--<mapping resource="ru/defo/model/WmArticle.hbm.xml"/>-->
+		<mapping class="ru.defo.model.WmArticleType"/>
+		<!-- <mapping resource="ru/defo/model/WmArticleType.hbm.xml"/>   -->
+		<mapping class="ru.defo.model.WmSku"/>
+		<mapping resource="ru/defo/model/WmSku.hbm.xml"/>
+		<mapping class="ru.defo.model.WmSkuCrush"/>
+		<mapping resource="ru/defo/model/WmSkuCrush.hbm.xml"/>
+		<mapping class="ru.defo.model.WmQualityState"/>
+		<mapping class="ru.defo.model.WmEquipment"/>
+		<mapping class="ru.defo.model.WmEquipmentType"/>
+		<mapping class="ru.defo.model.WmEquipmentState"/>
+		<mapping class="ru.defo.model.WmAdvice"/>
+		<mapping class="ru.defo.model.WmPreAdvice"/>
+		<mapping class="ru.defo.model.WmAdviceType"/>
+		<mapping class="ru.defo.model.WmAdvicePos"/>
+		<mapping class="ru.defo.model.WmPreAdvicePos"/>
+		<mapping class="ru.defo.model.WmOrder"/>
+		<mapping class="ru.defo.model.WmPreOrder"/>
+		<mapping class="ru.defo.model.WmOrderType"/>
+		<mapping class="ru.defo.model.WmOrderPos"/>
+		<mapping class="ru.defo.model.WmPreOrderPos"/>
+		<mapping class="ru.defo.model.WmStatus"/>
+		<mapping class="ru.defo.model.WmBinType"/>
+		<mapping class="ru.defo.model.WmCar"/>
+		<mapping class="ru.defo.model.WmPick"/>
+		<mapping class="ru.defo.model.WmCheck"/>
+		<mapping class="ru.defo.model.WmError"/>
+
+		<mapping class="ru.defo.model.WmInventory"/>
+        <mapping class="ru.defo.model.WmInventoryInitiator"/>
+        <mapping class="ru.defo.model.WmInventoryPos"/>
+        <mapping class="ru.defo.model.WmVendorGroup"/>
+
+        <mapping class="ru.defo.model.WmBatch"/>
+        <mapping class="ru.defo.model.WmRoute"/>
+		<mapping class="ru.defo.model.WsJob"/>
+
+		<mapping class="ru.defo.model.WmJob"/>
+        <mapping class="ru.defo.model.WmJobType"/>
+		<mapping class="ru.defo.model.WmComment"/>
+		<mapping class="ru.defo.model.WmIncome"/>
+
+		<mapping resource="ru/defo/model/views/VQuantInfoShort.hbm.xml"/>
+        <mapping class="ru.defo.model.views.VQuantInfoShort"/>
+		<mapping resource="ru/defo/model/views/Vadvice.hbm.xml"/>
+        <mapping class="ru.defo.model.views.Vadvice"/>
+        <mapping resource="ru/defo/model/views/Varticleqty.hbm.xml"/>
+        <mapping class="ru.defo.model.views.Varticleqty"/>
+		<mapping resource="ru/defo/model/views/Varticleqtyr.hbm.xml"/>
+        <mapping class="ru.defo.model.views.Varticleqtyr"/>
+        <mapping resource="ru/defo/model/views/Vunitinfo.hbm.xml"/>
+        <mapping class="ru.defo.model.views.Vunitinfo"/>
+		<mapping class="ru.defo.model.views.Vorderpos"/>
+		<mapping class="ru.defo.model.views.Vpreorderpos"/>
+		<mapping resource="ru/defo/model/views/Vpick.hbm.xml"/>
+        <mapping class="ru.defo.model.views.Vpick"/>
+        <mapping resource="ru/defo/model/views/Vcheck.hbm.xml"/>
+        <mapping class="ru.defo.model.views.Vcheck"/>
+		<mapping class="ru.defo.model.views.Vuserpermission"/>
+		<mapping class="ru.defo.model.views.VuserpermissionPK"/>
+		<mapping class="ru.defo.model.views.Vroute"/>
+		<mapping class="ru.defo.model.views.Vemptybin"/>
+
+
+		<mapping class="ru.defo.model.views.Vrouteordpos"/>
+        <mapping class="ru.defo.model.views.VrouteordposPK"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

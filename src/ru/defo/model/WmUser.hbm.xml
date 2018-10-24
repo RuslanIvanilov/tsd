@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.WmUser" table="wm_user" schema="public" catalog="wms">
+        <id name="userId">
+            <column name="user_id" sql-type="integer"/>
+        </id>
+        <property name="userLogin">
+            <column name="user_login" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="userBarcode">
+            <column name="user_barcode" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="surname">
+            <column name="surname" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="firstName">
+            <column name="first_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="patronymic">
+            <column name="patronymic" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="position">
+            <column name="position" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="emailCode">
+            <column name="email_code" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="blocked">
+            <column name="blocked" sql-type="boolean" not-null="true"/>
+        </property>
+        <property name="pwd">
+            <column name="pwd" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+
+        <property name="birth">
+            <column name="birth" sql-type="integer" not-null="false"/>
+        </property>
+    </class>
+
+    <sql-query name="getUserModules">
+	<![CDATA[select p.permission_id from wm_user_permission up left join wm_permission p on up.permission_id = p.permission_id where user_id = :userId and p.group_code = 'TSD' order by p.permission_id]]>
+    </sql-query>
+</hibernate-mapping>

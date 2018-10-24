@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.WmArticleType" table="wm_article_type" schema="public" catalog="wms">
+        <id name="articleTypeId">
+            <column name="article_type_id" sql-type="integer"/>
+        </id>
+        <property name="description">
+            <column name="description" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.views.Vadvice" table="vadvice" schema="public" catalog="wms">
+        <id name="adviceId">
+            <column name="advice_id" sql-type="integer" not-null="true"/>
+        </id>
+        <property name="adviceTypeId">
+            <column name="advice_type_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="adviceCode">
+            <column name="advice_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="expectedDate">
+            <column name="expected_date" sql-type="timestamp(5) with time zone" not-null="true"/>
+        </property>
+        <property name="factDate">
+            <column name="fact_date" sql-type="timestamp(5) with time zone" not-null="true"/>
+        </property>
+        <property name="carId">
+            <column name="car_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="placeCount">
+            <column name="place_count" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="statusId">
+            <column name="status_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="clientDocCode">
+            <column name="client_doc_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="carCode">
+            <column name="car_code" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="carMark">
+            <column name="car_mark" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="carModel">
+            <column name="car_model" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="binCode">
+            <column name="bin_code" sql-type="varchar(150)" length="150" not-null="true"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="errorId">
+            <column name="error_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="errorComment">
+            <column name="error_comment" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

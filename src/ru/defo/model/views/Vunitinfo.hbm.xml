@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.views.Vunitinfo" table="vunitinfo" schema="public" catalog="wms">
+        <id name="quantId">
+            <column name="quant_id" sql-type="integer" not-null="true"/>
+        </id>
+        <property name="unitCode">
+            <column name="unit_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="binCode">
+            <column name="bin_code" sql-type="varchar(150)" length="150" not-null="true"/>
+        </property>
+        <property name="areaCode">
+            <column name="area_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="rackNo">
+            <column name="rack_no" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="levelNo">
+            <column name="level_no" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="skuName">
+            <column name="sku_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="qstateName">
+            <column name="qstate_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="articleId">
+            <column name="article_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="skuId">
+            <column name="sku_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="unitId">
+            <column name="unit_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="qualityStateId">
+            <column name="quality_state_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="quantity">
+            <column name="quantity" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="adviceId">
+            <column name="advice_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="advicePosId">
+            <column name="advice_pos_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="needCheck">
+            <column name="need_check" sql-type="boolean" not-null="true"/>
+        </property>
+        <property name="createDate">
+            <column name="create_date" sql-type="timestamp(5) with time zone" not-null="true"/>
+        </property>
+        <property name="createUser">
+            <column name="create_user" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="surname">
+            <column name="surname" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="firstName">
+            <column name="first_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="adviceCode">
+            <column name="advice_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="expectedDate">
+            <column name="expected_date" sql-type="timestamp(5) with time zone" not-null="true"/>
+        </property>
+        <property name="articleCode">
+            <column name="article_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="articleName">
+            <column name="article_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="vendorGroupName">
+            <column name="vendor_group_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

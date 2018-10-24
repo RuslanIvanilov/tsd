@@ -1,0 +1,50 @@
+<% System.out.println("scan_article1.jsp"); %>
+<%
+  if(session.getAttribute("skuname") !=null){session.setAttribute("sku_delim", ":");}else{session.setAttribute("sku_delim", "");}
+%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=10 , maximum-scale=10, user-scalable=no">
+<title>TSD</title>
+ <script>setTimeout(function() {
+	  //document.getElementById('scaned_art_text').focus();
+	  //document.getElementById('btnOk').disabled = 0;
+	  //document.getElementById('btnCancel').disabled = 0;
+	  }, 10);
+
+ function scanf(){
+	 document.getElementById('scaned_art_text').focus();
+ }
+ </script>
+
+ <style>
+ body {
+	margin-right: -15px;
+	margin-bottom: -15px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+ </style>
+
+</head>
+<body class="body" onload="document.getElementById('scaned_art_text').value = ''; scanf()">
+<form  action="ScanArticle" method="post" onclick="scanf()">
+<p style="width: 135px">
+<small><b><%=session.getAttribute("articlecode")%></b></small><br>
+<small><%=session.getAttribute("articlename")%></small><br>
+<%=session.getAttribute("skuname")%> <%=session.getAttribute("sku_delim")%> <b><%=session.getAttribute("quantity") %></b><br>
+<small><b>Сканируйте товар</b></small>
+</p>
+
+
+<input style="border:none" type="text" id="scaned_art_text" name="scaned_art_text" onkeypress="if (event.keyCode == 13) submit" onblur="scanf()">
+<div style="overflow: hidden">
+<input style="display: inline; float: inherit; height: 25px; width: 40%;" type="button" id="btnCancel" value="Назад" onfocus="scanf()"  onclick='document.location.href ="<%=session.getAttribute("backpage")%>"'>
+<input style="display: inline; float: inherit; height: 25px; width: 40%;" type="button" id="btnOk" value="Хватит" onfocus="scanf()" onclick='document.location.href ="<%=session.getAttribute("savepage")%>"'>
+</div>
+</form>
+</body>
+</html>

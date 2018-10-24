@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.WmSku" table="wm_sku" schema="public" catalog="wms">
+        <id name="skuId">
+            <column name="sku_id" sql-type="integer"/>
+        </id>
+        <property name="description">
+            <column name="description" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="weight">
+            <column name="weight" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="heigh">
+            <column name="heigh" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="width">
+            <column name="width" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="length">
+            <column name="length" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="isBase">
+            <column name="is_base" sql-type="boolean" not-null="true"/>
+        </property>
+        <property name="skuCrushId">
+            <column name="sku_crush_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="articleId">
+            <column name="article_id" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project tsd">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/../.."/>
+    <property name="dir.jarfile" value="C:/"/>
+    <target name="create_run_jar">
+        <jar destfile="C:/ArticleLoader.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="webservice.client.wmsmsk.ArticleLoader"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.workspace}/tsd/target/classes"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/annotations-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/catalina-ant.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/catalina-ha.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/catalina-storeconfig.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/catalina-tribes.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/catalina.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/ecj-4.6.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/el-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/jasper-el.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/jasper.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/jaspic-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/jsp-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/servlet-api-3.0.20100224-sources.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/servlet-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-coyote.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-dbcp.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-i18n-es.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-i18n-fr.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-i18n-ja.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-jdbc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-jni.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-util-scan.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-util.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/tomcat-websocket.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Tomcat/lib/websocket-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/WebContent/WEB-INF/lib/axis.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/WebContent/WEB-INF/lib/commons-discovery-0.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/WebContent/WEB-INF/lib/commons-logging.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/WebContent/WEB-INF/lib/jaxrpc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/WebContent/WEB-INF/lib/postgresql-42.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/WebContent/WEB-INF/lib/saaj.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/WebContent/WEB-INF/lib/webserviceutils.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/WebContent/WEB-INF/lib/wsdl4j.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/lib/servlet-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/lib/postgresql-42.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt28_2.8.0.201703272136/gwt-2.8.0/gwt-user.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt28_2.8.0.201703272136/gwt-2.8.0/gwt-codeserver.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt28_2.8.0.201703272136/gwt-2.8.0/gwt-dev.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt28_2.8.0.201703272136/gwt-2.8.0/validation-api-1.0.0.GA-sources.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/com.gwtplugins.gwt.eclipse.sdkbundle.gwt28_2.8.0.201703272136/gwt-2.8.0/validation-api-1.0.0.GA.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/tsd/lib/jasperreports-6.4.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/jboss/jandex/2.0.0.Final/jandex-2.0.0.Final.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/apache/logging/log4j/log4j-api/2.9.1/log4j-api-2.9.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/syn-wms/.m2/repository/org/apache/logging/log4j/log4j-core/2.9.1/log4j-core-2.9.1.jar"/>
+        </jar>
+    </target>
+</project>

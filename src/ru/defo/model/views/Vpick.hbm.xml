@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.views.Vpick" table="vpick" schema="public" catalog="wms">
+    	<id name="pickId">
+            <column name="pick_id" sql-type="integer" not-null="true"/>
+        </id>
+        <property name="unitCode">
+            <column name="unit_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="unitId">
+            <column name="unit_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="binCode">
+            <column name="bin_code" sql-type="varchar(150)" length="150" not-null="true"/>
+        </property>
+        <property name="binId">
+            <column name="bin_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="qstateName">
+            <column name="qstate_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="qualityStateId">
+            <column name="quality_state_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="quantity">
+            <column name="quantity" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="createDate">
+            <column name="create_date" sql-type="timestamp(5) with time zone" not-null="true"/>
+        </property>
+        <property name="surname">
+            <column name="surname" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="firstName">
+            <column name="first_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="orderId">
+            <column name="order_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="orderPosId">
+            <column name="order_pos_id" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

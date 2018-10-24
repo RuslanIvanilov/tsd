@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.defo.ru" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.defo.ru" xmlns:intf="http://services.defo.ru" xmlns:tns1="http://model.defo.ru" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.defo.ru" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.defo.ru"/>
+   <element name="getArticles">
+    <complexType/>
+   </element>
+   <element name="getArticlesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getArticlesReturn" type="tns1:WmArticle"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addArticle">
+    <complexType>
+     <sequence>
+      <element name="article" type="tns1:WmArticle"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addArticleResponse">
+    <complexType>
+     <sequence>
+      <element name="addArticleReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getArticle">
+    <complexType>
+     <sequence>
+      <element name="articleid" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getArticleResponse">
+    <complexType>
+     <sequence>
+      <element name="getArticleReturn" type="tns1:WmArticle"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteArticle">
+    <complexType>
+     <sequence>
+      <element name="articleid" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteArticleResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteArticleReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.defo.ru" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="WmArticle">
+    <sequence>
+     <element name="abcCode" nillable="true" type="xsd:string"/>
+     <element name="articleClientCode" nillable="true" type="xsd:string"/>
+     <element name="articleCode" nillable="true" type="xsd:string"/>
+     <element name="articleId" nillable="true" type="xsd:long"/>
+     <element name="articleKitId" nillable="true" type="xsd:long"/>
+     <element name="articleTypeId" nillable="true" type="xsd:long"/>
+     <element name="blocked" nillable="true" type="xsd:boolean"/>
+     <element name="clientId" nillable="true" type="xsd:long"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="descriptionClient" nillable="true" type="xsd:string"/>
+     <element name="lotNeed" nillable="true" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addArticleResponse">
+
+      <wsdl:part element="impl:addArticleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addArticleRequest">
+
+      <wsdl:part element="impl:addArticle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteArticleResponse">
+
+      <wsdl:part element="impl:deleteArticleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getArticlesRequest">
+
+      <wsdl:part element="impl:getArticles" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getArticlesResponse">
+
+      <wsdl:part element="impl:getArticlesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getArticleResponse">
+
+      <wsdl:part element="impl:getArticleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteArticleRequest">
+
+      <wsdl:part element="impl:deleteArticle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getArticleRequest">
+
+      <wsdl:part element="impl:getArticle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ArticleServiceImpl">
+
+      <wsdl:operation name="getArticles">
+
+         <wsdl:input message="impl:getArticlesRequest" name="getArticlesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getArticlesResponse" name="getArticlesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addArticle">
+
+         <wsdl:input message="impl:addArticleRequest" name="addArticleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addArticleResponse" name="addArticleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getArticle">
+
+         <wsdl:input message="impl:getArticleRequest" name="getArticleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getArticleResponse" name="getArticleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteArticle">
+
+         <wsdl:input message="impl:deleteArticleRequest" name="deleteArticleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteArticleResponse" name="deleteArticleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ArticleServiceImplSoapBinding" type="impl:ArticleServiceImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getArticles">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getArticlesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getArticlesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addArticle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addArticleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addArticleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getArticle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getArticleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getArticleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteArticle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteArticleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteArticleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ArticleServiceImplService">
+
+      <wsdl:port binding="impl:ArticleServiceImplSoapBinding" name="ArticleServiceImpl">
+
+         <wsdlsoap:address location="http://192.168.22.185:5573/tsd/services/ArticleServiceImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

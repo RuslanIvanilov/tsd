@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.WmQuant" table="wm_quant" schema="public" catalog="wms">
+        <id name="quantId">
+            <column name="quant_id" sql-type="integer"/>
+        </id>
+        <property name="articleId">
+            <column name="article_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="skuId">
+            <column name="sku_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="lotId">
+            <column name="lot_id" sql-type="integer" not-null="false"/>
+        </property>
+        <property name="qualityStateId">
+            <column name="quality_state_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="boxBarcode">
+            <column name="box_barcode" sql-type="varchar(50)" length="50" not-null="false"/>
+        </property>
+        <property name="quantity">
+            <column name="quantity" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="clientId">
+            <column name="client_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="unitId">
+            <column name="unit_id" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="adviceId">
+            <column name="advice_id" sql-type="integer" not-null="false"/>
+        </property>
+        <property name="advicePosId">
+            <column name="advice_pos_id" sql-type="integer" not-null="false"/>
+        </property>
+        <property name="needCheck">
+            <column name="need_check" sql-type="boolean" not-null="true"/>
+        </property>
+        <property name="createDate">
+            <column name="create_date" sql-type="timestamp(5) with time zone" not-null="true"/>
+        </property>
+        <property name="createUser">
+            <column name="create_user" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+
+	<!--
+	<sql-query name="getQuantInfo">
+	<![CDATA[select * from VQuantInfoShort where q.quant_id = :quantId]]>
+    </sql-query>  -->
+
+</hibernate-mapping>

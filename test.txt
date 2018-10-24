@@ -1,0 +1,7 @@
+^XA
+^BY2          
+^FO0,200
+^FB632,2,0,C,0
+^ASN,60,60
+^FDHELLO DEFO!!!^FS
+^XZ

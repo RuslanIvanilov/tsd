@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.views.Varticleqtyr" table="varticleqtyr" schema="public" catalog="wms">
+        <id name="articleId">
+            <column name="article_id" sql-type="integer" not-null="true"/>
+        </id>
+        <property name="articleCode">
+            <column name="article_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="articleName">
+            <column name="article_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="qtySum">
+            <column name="qty_sum" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="hostQuantity">
+            <column name="host_quantity" sql-type="bigint" not-null="true"/>
+        </property>
+
+        <property name="factQuantity">
+            <column name="fact_quantity" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="dWmsFact">
+            <column name="d_wms_fact" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="dWmsHost">
+            <column name="d_wms_host" sql-type="bigint" not-null="true"/>
+        </property>
+        <property name="dFactHost">
+            <column name="d_fact_host" sql-type="bigint" not-null="true"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

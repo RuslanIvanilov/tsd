@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.WmSkuCrush" table="wm_sku_crush" schema="public" catalog="wms">
+        <id name="skuCrushId">
+            <column name="sku_crush_id" sql-type="integer"/>
+        </id>
+        <property name="description">
+            <column name="description" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="crushClass">
+            <column name="crush_class" sql-type="integer" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

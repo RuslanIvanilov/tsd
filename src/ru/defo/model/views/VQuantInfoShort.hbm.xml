@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.defo.model.views.VQuantInfoShort" table="vquantinfoshort" schema="public" catalog="wms">
+        <id name="quantId">
+            <column name="quant_id" sql-type="integer" not-null="true"/>
+        </id>
+        <property name="articleCode">
+            <column name="article_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="artName">
+            <column name="art_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="skuName">
+            <column name="sku_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="quantity">
+            <column name="quantity" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="qualityName">
+            <column name="quality_name" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="unitCode">
+            <column name="unit_code" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="binCode">
+            <column name="bin_code" sql-type="varchar(150)" length="150" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
